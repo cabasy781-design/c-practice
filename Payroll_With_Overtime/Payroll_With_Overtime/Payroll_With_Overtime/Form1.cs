@@ -24,12 +24,13 @@ namespace Payroll_With_Overtime
             double hoursWorked;
             double hourlyPayRate;
             double grossPay;
+            string name;
 
             try
             {
                 // converting hours into double
-                if (double.TryParse(hoursWorkedTextBox.Text, out hoursWorked))
-                if (double.TryParse(hourlyPayRateTextBox.Text, out hourlyPayRate))
+                if (double.TryParse(hoursWorked.Text, out hoursWorked))
+                if (double.TryParse(hourlyPayRate.Text, out hourlyPayRate))
 
                         // Check if hours worked is valid
                         if (hoursWorked >= 0)
@@ -94,6 +95,11 @@ namespace Payroll_With_Overtime
             hoursWorkedTextBox.Text = " ";
             hourlyPayRateTextBox.Text = " ";
             grossPayLabel.Text= " ";
+        }
+
+        private void hoursWorkedTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
