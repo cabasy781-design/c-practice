@@ -30,7 +30,7 @@ namespace Payroll_With_Overtime
             {
                 // converting hours into double
                 if (double.TryParse(hoursWorked.Text, out hoursWorked))
-                if (double.TryParse(hourlyPayRate.Text, out hourlyPayRate))
+                    if (double.TryParse(hourlyPayRate.Text, out hourlyPayRate))
 
                         // Check if hours worked is valid
                         if (hoursWorked >= 0)
